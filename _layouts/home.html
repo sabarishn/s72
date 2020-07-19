@@ -4,8 +4,6 @@ layout: page
 
 {{ content }}
 
-{% assign posts = paginator.posts | default: site.posts %}
-
 <div class="container-md" role="main">
   <div class="row">
     <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
@@ -33,6 +31,8 @@ layout: page
     </div>
   </div>
 </div>
+
+{% assign posts = paginator.posts | default: site.posts %}
 
 <div class="posts-list">
   {% for post in posts %}
